@@ -262,19 +262,15 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
 client.on("message", message => {
   if (message.content === "#viphelp") {
-	  if (message.author.id !== '483092158786568203') return message.reply('**هاذا المر فقط لصاحب السيرفر فقط**')
+	  if (message.author.id !== '483092158786568203') return message.reply ('**هاذا المر فقط لصاحب السيرفر فقط**')
  if(!message.author.id === '483092158786568203') return;
-  const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
-      .setDescription(`
-#vipsetgame ==> لتغيرر البلايينج حك البوت
+  message.author.sendMessage('
+**#vipsetgame ==> لتغيرر البلايينج حك البوت
 #vipsetname ==> لتغيير اسم البوت 
 #vipsetavatar ==> لتغيير صورة البوت
 #vipsetT ==> لتغيير التويتش حك البوت
-
-`)
-   message.author.sendEmbed(embed)
-    
+**
+')   
    }
    }); 
 
